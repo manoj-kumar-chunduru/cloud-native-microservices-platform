@@ -32,27 +32,22 @@ engineering behavior can be inspected, tested, and extended easily.
 
 ## Current Architecture
 
+The current implementation is a lightweight FastAPI reference service.
+
 ```text
-                    ┌──────────────────┐
-                    │      Client      │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │     FastAPI      │
-                    │                  │
-                    │   User API       │
-                    │ Health/Readiness │
-                    │     Metrics      │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │ In-Memory Store  │
-                    │                  │
-                    │ User Persistence │
-                    └──────────────────┘
-```
+Client
+  |
+  v
+FastAPI Application
+  |
+  +---- User API
+  |
+  +---- Health / Readiness
+  |
+  +---- Prometheus Metrics
+  |
+  v
+In-Memory User Store```
 
 ## Implemented Capabilities
 
