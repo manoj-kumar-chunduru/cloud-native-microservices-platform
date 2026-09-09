@@ -47,7 +47,8 @@ FastAPI Application
   +---- Prometheus Metrics
   |
   v
-In-Memory User Store```
+In-Memory User Store
+```
 
 ## Implemented Capabilities
 
